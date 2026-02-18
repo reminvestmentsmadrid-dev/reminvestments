@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | REM Investments</title>
+  <meta name="description" content="Contacta con REM Investments y The Nest para inversión, compra o alquiler en Madrid, visados, NIE y residencia en España.">
+  <link rel="canonical" href="https://reminvestments.es/contact.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">R<span>M</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">REM Investments</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="why-spain.html">Why Spain</a></li>
+        <li><a href="invest-spain.html">Invest in Spain</a></li>
+        <li><a href="the-nest.html">The Nest</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Cuéntanos tu objetivo y te proponemos un plan claro para Madrid y España.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>La puerta a Europa.</h2>
+          <p>Estamos en Madrid y podemos ayudarte con inversión, vivienda, relocation y documentación migratoria.</p>
+
+          <div class="contact-details">
+            <p>
+              <strong>Teléfono</strong><br>
+              <a href="tel:+34616108470">+34 616 108 470</a><br>
+              <a href="tel:+34600386092">+34 600 386 092</a>
+            </p>
+            <p>
+              <strong>Email</strong><br>
+              <a href="mailto:info@reminvestments.es">info@reminvestments.es</a>
+            </p>
+            <p>
+              <strong>Ubicación</strong><br>
+              Madrid, España
+            </p>
+          </div>
+
+          <div style="margin-top: var(--spacing-lg);">
+            <img src="images/logo.png" alt="REM Investments Logo" style="max-width: 120px; opacity: 0.5;">
+          </div>
+        </div>
+
+        <div>
+          <form id="contact-form" class="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=true">
+            <input type="hidden" name="form-name" value="contacto">
+            <p style="display: none;">
+              <label>No rellenar: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-group">
+              <label for="name">Nombre completo *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Servicio de interés</label>
+              <select id="service" name="service">
+                <option value="">Selecciona una opción</option>
+                <option value="student-housing">The Nest - Estudiantes (1-2 años)</option>
+                <option value="summer-rental">The Nest - Alquiler de temporada</option>
+                <option value="buy-madrid">The Nest - Comprar piso en Madrid</option>
+                <option value="visas-spain">The Nest - Visados / NIE / Residencia</option>
+                <option value="invest-spain">REM - Invertir en España</option>
+                <option value="consultoria">REM - Consultoría de inversión</option>
+                <option value="expansion">REM - Expansión a España</option>
+                <option value="ma">REM - Oportunidades de M&A</option>
+                <option value="other-nest">The Nest - Otro</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje *</label>
+              <textarea id="message" name="message" required placeholder="Cuéntanos qué buscas, presupuesto aproximado y cuándo quieres venir."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width: 100%;">Enviar mensaje</button>
+
+            <p style="font-size: 0.8rem; color: var(--color-gray); margin-top: var(--spacing-sm);">
+              Al enviar este formulario, aceptas que contactemos contigo para responder a tu consulta.
+            </p>
+          </form>
+
+          <div id="form-success" style="display: none; text-align: center; padding: var(--spacing-lg) var(--spacing-md);">
+            <h3 style="margin-bottom: var(--spacing-sm);">Mensaje enviado</h3>
+            <p style="color: var(--color-gray);">Gracias por contactarnos. Te responderemos a la brevedad.</p>
+            <a href="contact.html" class="btn btn--outline" style="margin-top: var(--spacing-md);">Enviar otro mensaje</a>
+          </div>
+
+          <div id="form-error" style="display: none; text-align: center; padding: var(--spacing-sm); margin-bottom: var(--spacing-sm); background: #fef2f2; border: 1px solid #fecaca; color: #991b1b;">
+            <p style="margin: 0;">Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Nuestros Partners</h2>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <img src="images/partners.png" alt="Partners de REM Investments" style="width: 100%; height: auto;">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">R<span style="font-style: italic;">M</span></div>
+          <p class="footer-tagline">La puerta a Europa.</p>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="why-spain.html">Why Spain</a></li>
+            <li><a href="invest-spain.html">Invest in Spain</a></li>
+            <li><a href="the-nest.html">The Nest</a></li>
+          </ul>
+          <ul>
+            <li><a href="tel:+34616108470">+34 616 108 470</a></li>
+            <li><a href="tel:+34600386092">+34 600 386 092</a></li>
+            <li><a href="mailto:info@reminvestments.es">info@reminvestments.es</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 REM Investments. Todos los derechos reservados.</span>
+        <span>Madrid, España</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const serviceParam = params.get('service');
+    const serviceSelect = document.getElementById('service');
+    if (serviceParam && serviceSelect && serviceSelect.querySelector(`option[value="${serviceParam}"]`)) {
+      serviceSelect.value = serviceParam;
+    }
+
+    if (params.has('success')) {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const errorDiv = document.getElementById('form-error');
+
+      errorDiv.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString()
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        errorDiv.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar mensaje';
+      }
+    });
+  </script>
+</body>
+</html>
