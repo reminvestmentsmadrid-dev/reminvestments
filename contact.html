@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | REM Investments</title>
+  <title>Contacto | REM Investments</title>
   <meta name="description" content="Contacta con REM Investments y The Nest para inversión, compra o alquiler en Madrid, visados, NIE y residencia en España.">
   <link rel="canonical" href="https://reminvestments.es/contact.html">
   <link rel="stylesheet" href="css/styles.css">
@@ -15,11 +15,11 @@
       <a href="index.html" class="logo">R<span>M</span></a>
       <ul class="nav-links">
         <li><a href="index.html">REM Investments</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="why-spain.html">Why Spain</a></li>
-        <li><a href="invest-spain.html">Invest in Spain</a></li>
+        <li><a href="about.html">Sobre nosotras</a></li>
+        <li><a href="why-spain.html">Por qué España</a></li>
+        <li><a href="invest-spain.html">Inversión en España</a></li>
         <li><a href="the-nest.html">The Nest</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active">Contacto</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span></span>
@@ -31,7 +31,7 @@
 
   <div class="page-header">
     <div class="container">
-      <h1>Contact</h1>
+      <h1>Contacto</h1>
       <p>Cuéntanos tu objetivo y te proponemos un plan claro para Madrid y España.</p>
     </div>
   </div>
@@ -46,7 +46,6 @@
           <div class="contact-details">
             <p>
               <strong>Teléfono</strong><br>
-              <a href="tel:+34616108470">+34 616 108 470</a><br>
               <a href="tel:+34600386092">+34 600 386 092</a>
             </p>
             <p>
@@ -65,11 +64,11 @@
         </div>
 
         <div>
-          <form id="contact-form" class="contact-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=true">
-            <input type="hidden" name="form-name" value="contacto">
-            <p style="display: none;">
-              <label>No rellenar: <input name="bot-field"></label>
-            </p>
+          <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/ajax/info@reminvestments.es">
+            <input type="hidden" name="_subject" value="Nuevo lead desde reminvestments.es">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
 
             <div class="form-group">
               <label for="name">Nombre completo *</label>
@@ -90,7 +89,7 @@
               <label for="service">Servicio de interés</label>
               <select id="service" name="service">
                 <option value="">Selecciona una opción</option>
-                <option value="student-housing">The Nest - Estudiantes (1-2 años)</option>
+                <option value="student-housing">The Nest - Estudiantes</option>
                 <option value="summer-rental">The Nest - Alquiler de temporada</option>
                 <option value="buy-madrid">The Nest - Comprar piso en Madrid</option>
                 <option value="visas-spain">The Nest - Visados / NIE / Residencia</option>
@@ -147,15 +146,14 @@
         </div>
         <div class="footer-links">
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="why-spain.html">Why Spain</a></li>
-            <li><a href="invest-spain.html">Invest in Spain</a></li>
+            <li><a href="about.html">Sobre nosotras</a></li>
+            <li><a href="why-spain.html">Por qué España</a></li>
+            <li><a href="invest-spain.html">Inversión en España</a></li>
             <li><a href="the-nest.html">The Nest</a></li>
           </ul>
           <ul>
-            <li><a href="tel:+34616108470">+34 616 108 470</a></li>
             <li><a href="tel:+34600386092">+34 600 386 092</a></li>
-            <li><a href="https://wa.me/34616108470">WhatsApp</a></li>
+            <li><a href="https://wa.me/34600386092">WhatsApp</a></li>
             <li><a href="mailto:info@reminvestments.es">info@reminvestments.es</a></li>
           </ul>
         </div>
@@ -188,11 +186,6 @@
       serviceSelect.value = serviceParam;
     }
 
-    if (params.has('success')) {
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }
-
     document.getElementById('contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       const form = e.target;
@@ -204,13 +197,14 @@
       submitBtn.textContent = 'Enviando...';
 
       try {
-        const response = await fetch('/', {
+        const response = await fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString()
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
         });
 
         if (response.ok) {
+          form.reset();
           form.style.display = 'none';
           document.getElementById('form-success').style.display = 'block';
         } else {
