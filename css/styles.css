@@ -601,6 +601,25 @@ a {
   opacity: 1;
 }
 
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  opacity: 0.85;
+}
+
+.social-icon-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .footer-bottom {
   padding-top: var(--spacing-md);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
