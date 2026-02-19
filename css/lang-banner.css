@@ -1,0 +1,54 @@
+.lang-banner {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3000;
+  max-width: 460px;
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.lang-banner__text {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.lang-banner__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-banner__btn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.lang-banner__btn--primary {
+  background: #ffffff;
+  color: #111111;
+}
+
+.lang-banner__btn--ghost {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 640px) {
+  .lang-banner {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    max-width: none;
+  }
+}
